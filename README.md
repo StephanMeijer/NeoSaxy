@@ -24,7 +24,7 @@ Add `:neo_saxy` to your `mix.exs`.
 ```elixir
 def deps() do
   [
-    {:neo_saxy, "~> 1.0.0"}
+    {:neo_saxy, "~> 1.0"}
   ]
 end
 ```

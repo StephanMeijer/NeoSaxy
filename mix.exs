@@ -2,13 +2,13 @@ defmodule NeoSaxy.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/StephanMeijer/neo_saxy"
-  @version "1.0.0"
+  @version "1.0.1"
 
   def project() do
     [
       app: :neo_saxy,
       version: @version,
-      elixir: "~> 1.11",
+      elixir: "~> 1.12",
       name: "NeoSaxy",
       consolidate_protocols: Mix.env() != :test,
       deps: deps(),
