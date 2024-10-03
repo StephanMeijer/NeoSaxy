@@ -1,13 +1,13 @@
-defmodule Saxy.TestHandlers.StackHandler do
-  @behaviour Saxy.Handler
+defmodule NeoSaxy.TestHandlers.StackHandler do
+  @behaviour NeoSaxy.Handler
 
   def handle_event(event_type, event_data, acc) do
     {:ok, [{event_type, event_data} | acc]}
   end
 end
 
-defmodule SaxyTest.StackHandler do
-  @behaviour Saxy.Handler
+defmodule NeoSaxyTest.StackHandler do
+  @behaviour NeoSaxy.Handler
 
   @impl true
   def handle_event(event_type, event_data, acc) do
@@ -15,8 +15,8 @@ defmodule SaxyTest.StackHandler do
   end
 end
 
-defmodule SaxyTest.ControlHandler do
-  @behaviour Saxy.Handler
+defmodule NeoSaxyTest.ControlHandler do
+  @behaviour NeoSaxy.Handler
 
   @impl true
   def handle_event(event_type, _, {event_type, returning}) do
@@ -35,7 +35,7 @@ end
 # For docs test
 
 defmodule MyTestHandler do
-  @behaviour Saxy.Handler
+  @behaviour NeoSaxy.Handler
 
   def handle_event(:start_document, prolog, state) do
     {:ok, [{:start_document, prolog} | state]}
@@ -60,11 +60,11 @@ end
 
 defmodule Person do
   @derive {
-    Saxy.Builder,
+    NeoSaxy.Builder,
     name: "person", attributes: [:gender], children: [:name, emails: &__MODULE__.build_emails/1]
   }
 
-  import Saxy.XML
+  import NeoSaxy.XML
 
   defstruct [:name, :gender, emails: []]
 
@@ -83,8 +83,8 @@ defmodule User do
   defstruct [:username, :name]
 end
 
-defimpl Saxy.Builder, for: User do
-  import Saxy.XML
+defimpl NeoSaxy.Builder, for: User do
+  import NeoSaxy.XML
 
   def build(user) do
     element(

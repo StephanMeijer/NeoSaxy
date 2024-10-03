@@ -1,5 +1,5 @@
 defmodule Bench.NoopHandler do
-  @behaviour Saxy.Handler
+  @behaviour NeoSaxy.Handler
 
   @impl true
   def handle_event(_, _, state), do: {:ok, state}
