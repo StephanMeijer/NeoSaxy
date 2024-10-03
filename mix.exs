@@ -2,7 +2,7 @@ defmodule NeoSaxy.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/StephanMeijer/neo_saxy"
-  @version "1.0.1"
+  @version "1.0.2"
 
   def project() do
     [
@@ -27,8 +27,8 @@ defmodule NeoSaxy.MixProject do
       maintainers: ["Stephan Meijer"],
       licenses: ["MIT"],
       links: %{
-        "Changelog" => "https://hexdocs.pm/neo_saxy/changelog.html",
-        "GitHub" => @source_url
+        "GitHub" => @source_url,
+        "Changelog" => "https://hexdocs.pm/neo_saxy/changelog.html"
       }
     ]
   end
