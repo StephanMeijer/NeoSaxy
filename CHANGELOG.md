@@ -2,7 +2,7 @@
 
 ## v1.0.1 - 2024-10-03
 
-- Fix compile time errors.
+- Fix compile time errors. (@lucacorti)
 
 ## v1.0.0 - 2024-10-03
 

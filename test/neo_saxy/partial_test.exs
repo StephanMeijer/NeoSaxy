@@ -11,7 +11,10 @@ defmodule NeoSaxy.PartialTest do
   doctest NeoSaxy.Partial
 
   @fixtures [
-    "food.xml",
+    "no-xml-decl.xml",
+    "no-xml-decl-with-std-pi.xml",
+    "no-xml-decl-with-custom-pi.xml",
+    "foo.xml",
     "food.xml",
     "complex.xml",
     "illustrator.svg",
