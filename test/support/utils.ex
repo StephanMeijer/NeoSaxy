@@ -1,4 +1,4 @@
-defmodule SaxyTest.Utils do
+defmodule NeoSaxyTest.Utils do
   use ExUnitProperties
 
   import ExUnit.Assertions
@@ -11,8 +11,8 @@ defmodule SaxyTest.Utils do
   end
 
   def parse(data, handler, state, options \\ []) do
-    assert result = Saxy.parse_string(data, handler, state, options)
-    assert Saxy.parse_stream([data], handler, state, options) == result
+    assert result = NeoSaxy.parse_string(data, handler, state, options)
+    assert NeoSaxy.parse_stream([data], handler, state, options) == result
 
     result
   end

@@ -8,8 +8,8 @@ bench_options = [
   }
 ]
 
-defmodule Bench.Saxy.Builder do
-  import Saxy.XML, only: [element: 3]
+defmodule Bench.NeoSaxy.Builder do
+  import NeoSaxy.XML, only: [element: 3]
 
   def build(:simple) do
     element("root", [], [
@@ -92,10 +92,10 @@ end
 
 Benchee.run(
   %{
-    "Saxy (red apple)" => fn sample ->
+    "NeoSaxy (red apple)" => fn sample ->
       sample
-      |> Bench.Saxy.Builder.build()
-      |> Saxy.encode!()
+      |> Bench.NeoSaxy.Builder.build()
+      |> NeoSaxy.encode!()
     end,
     "XML Builder without formatting (red apple)" => fn sample ->
       sample

@@ -11,7 +11,7 @@ bench_options = [
 ]
 
 saxy_parser = fn {data, _} ->
-  {:ok, _} = Saxy.SimpleForm.parse_string(data)
+  {:ok, _} = NeoSaxy.SimpleForm.parse_string(data)
 end
 
 erlsom_parser = fn {_, data} ->
@@ -24,7 +24,7 @@ end
 
 Benchee.run(
   %{
-    "Saxy (green apple)" => saxy_parser,
+    "NeoSaxy (green apple)" => saxy_parser,
     "Erlsom (green apple)" => erlsom_parser,
     "Exomler (red apple)" => exomler_parser
   },

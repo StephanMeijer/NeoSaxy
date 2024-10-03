@@ -1,11 +1,11 @@
-defmodule SaxyTest.ParsingCase do
+defmodule NeoSaxyTest.ParsingCase do
   use ExUnit.CaseTemplate
 
   using do
     quote do
       use ExUnitProperties
 
-      import SaxyTest.Utils
+      import NeoSaxyTest.Utils
     end
   end
 end

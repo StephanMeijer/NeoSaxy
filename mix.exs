@@ -1,15 +1,15 @@
-defmodule Saxy.MixProject do
+defmodule NeoSaxy.MixProject do
   use Mix.Project
 
-  @source_url "https://github.com/qcam/saxy"
-  @version "1.5.1"
+  @source_url "https://github.com/StephanMeijer/neo_saxy"
+  @version "1.0.1"
 
   def project() do
     [
-      app: :saxy,
+      app: :neo_saxy,
       version: @version,
-      elixir: "~> 1.11",
-      name: "Saxy",
+      elixir: "~> 1.12",
+      name: "NeoSaxy",
       consolidate_protocols: Mix.env() != :test,
       deps: deps(),
       package: package(),
@@ -22,12 +22,12 @@ defmodule Saxy.MixProject do
   defp package() do
     [
       description:
-        "Saxy is an XML parser and encoder in Elixir that focuses on speed " <>
+        "NeoSaxy is an XML parser and encoder in Elixir that focuses on speed " <>
           "and standard compliance.",
-      maintainers: ["Cẩm Huỳnh"],
+      maintainers: ["Stephan Meijer"],
       licenses: ["MIT"],
       links: %{
-        "Changelog" => "https://hexdocs.pm/saxy/changelog.html",
+        "Changelog" => "https://hexdocs.pm/neo_saxy/changelog.html",
         "GitHub" => @source_url
       }
     ]
@@ -36,7 +36,7 @@ defmodule Saxy.MixProject do
   defp deps() do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:stream_data, "~> 0.5", only: [:dev, :test]}
+      {:stream_data, "~> 1.0", only: [:dev, :test]}
     ]
   end
 
